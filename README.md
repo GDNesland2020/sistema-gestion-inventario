@@ -41,26 +41,27 @@ Gestionar productos, categorías y movimientos de inventario, permitiendo contro
 
 ## 5. Configuración de la base de datos
 
-Crear una base de datos en MySQL:
+El sistema utiliza MySQL 8 como gestor de base de datos y se conecta mediante Spring Data JPA.
+
+La base de datos utilizada por el proyecto se llama `inventario_db`.
+
+Para crearla manualmente en MySQL, ejecutar:
 
 ```sql
 CREATE DATABASE inventario_db;
 ```
 
-Configurar el archivo `src/main/resources/application.properties`:
+La conexión se configura en el archivo `src/main/resources/application.properties` mediante variables de entorno:
 
 ```properties
-spring.application.name=inventario
-spring.datasource.url=jdbc:mysql://localhost:3306/inventario_db
-spring.datasource.username=root
-spring.datasource.password=TU_CONTRASEÑA
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+spring.datasource.url=${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/inventario_db}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME:root}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD:}
 ```
 
-Reemplazar `TU_CONTRASEÑA` por la contraseña local de MySQL.
+Si se ejecuta el proyecto con Docker Compose, la contraseña de MySQL debe definirse en el archivo `.env` mediante la variable `MYSQL_ROOT_PASSWORD`.
+
+El archivo `.env` contiene información privada y no debe publicarse en GitHub.
 
 ## 6. Instalación y ejecución
 
