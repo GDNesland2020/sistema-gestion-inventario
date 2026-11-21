@@ -1,0 +1,15 @@
+.env
+inventario_backup.sql
+target/
+.git/
+### Variables de entorno ###
+.env
+.env.*
+
+### Respaldos de base de datos ###
+*.sql
+*.dump
+
+### Archivos del sistema ###
+.DS_Store
+Thumbs.db
