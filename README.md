@@ -7,6 +7,53 @@ API REST desarrollada con Java y Spring Boot para administrar el inventario de u
 
 Gestionar productos, categorías y movimientos de inventario, permitiendo controlar las entradas, salidas y disponibilidad de los productos.
 
+## Funcionalidades del sistema
+
+### 1. Dashboard
+- Visualización del total de productos y categorías.
+- Indicadores de productos con stock bajo.
+- Alertas de productos agotados.
+
+### 2. Gestión de productos
+- Registrar productos.
+- Consultar productos.
+- Actualizar información.
+- Eliminar productos.
+- Consultar productos con stock bajo o agotados.
+- Validación de SKU único y datos obligatorios.
+
+### 3. Gestión de categorías
+- Registrar categorías.
+- Consultar categorías.
+- Actualizar categorías.
+- Eliminar categorías.
+- Validación de nombre y descripción.
+
+### 4. Gestión de movimientos
+- Registrar entradas de inventario.
+- Registrar salidas de inventario.
+- Consultar el historial de movimientos.
+- Consultar movimientos por producto.
+- Actualización automática de las existencias.
+
+### 5. Validaciones y reglas de negocio
+- No se permiten cantidades negativas o iguales a cero.
+- No se permiten salidas superiores al stock disponible.
+- No se permite eliminar categorías que tengan productos asociados.
+- No se permite eliminar productos que tengan movimientos registrados.
+
+## Interfaz web
+
+El sistema cuenta con una interfaz web desarrollada con:
+
+- HTML5.
+- CSS3.
+- JavaScript.
+- Bootstrap 5.3.3.
+- Bootstrap Icons.
+
+La interfaz permite administrar productos, categorías y movimientos desde un panel de control.
+
 ## 2. Tecnologías utilizadas
 
 - Java 21
